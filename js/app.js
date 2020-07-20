@@ -2,7 +2,6 @@ var common = {
 	init: function() {
 		common.main();
 		common.owl();
-		common.typingText();
 	},
 	main: function(){
 
@@ -10,6 +9,12 @@ var common = {
 			event.preventDefault();
 			$('body').toggleClass('hidden');
 			$(this).closest('header').toggleClass('open');
+		});
+
+		$('.question-trigger').click(function(event){
+			event.preventDefault();
+			$(this).closest('.question').toggleClass('open');
+			$(this).closest('.question').find('.question-cnt').slideToggle('fast');
 		})
 
 		var bLazy = new Blazy({});
@@ -25,7 +30,7 @@ var common = {
 			}
 		});
 
-		// $(".phone-trigger").mask("+81(999) 999-99-99");
+		$(".phone-trigger").mask("+81(999) 999-99-99");
 
 		jQuery(function($){
 			$(document).mouseup(function (e){ 
@@ -85,11 +90,18 @@ var common = {
 		$('.tel-trigger').mask("+7(999) 999-99-99");
 
 		function fixedHead() {
-			$('header').addClass('fixed');
-			$('body').css({'margin-top':$('header').outerHeight()})
+			if($(window).scrollTop() > 1){
+				$('header').addClass('fixed');
+			}else {
+				$('header').removeClass('fixed');
+			}
 		};
 
 		fixedHead();
+
+		$( window ).scroll(function() {
+			fixedHead();
+		});
 
 		$(window).resize(function() {
 			fixedHead();

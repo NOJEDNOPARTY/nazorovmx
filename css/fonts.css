@@ -1,13 +1,3 @@
-/* Montserrat */
-
-@font-face {
-    font-family: 'Montserrat-SemiBold';
-    src: url('./fonts/montserrat/Montserrat-SemiBold.woff2') format('woff2'),
-        url('./fonts/montserrat/Montserrat-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
 /* IBM Plex Sans */
 
 @font-face {
@@ -57,12 +47,31 @@
 
 /* Base 02 Cyrillic  */
 
+
 @font-face {
     font-family: 'Base 02 Cyrillic';
-    src: url('./fonts/base02/Base02Cyrillic.woff2') format('woff2'),
-        url('./fonts/base02/Base02Cyrillic.woff') format('woff');
+    src: url('./fonts/base02/Base02Cyrillic.eot');
+    src: url('./fonts/base02/Base02Cyrillic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/base02/Base02Cyrillic.woff2') format('woff2'),
+        url('./fonts/base02/Base02Cyrillic.woff') format('woff'),
+        url('./fonts/base02/Base02Cyrillic.ttf') format('truetype'),
+        url('./fonts/base02/Base02Cyrillic.svg#Base02Cyrillic') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* snyder */
+
+@font-face {
+    font-family: 'Snyder Speed Brush Cyr';
+    src: url('./fonts/snyder/SnyderSpeedBrushCyr-Regular.woff2') format('woff2'),
+        url('./fonts/snyder/SnyderSpeedBrushCyr-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+
+
 
