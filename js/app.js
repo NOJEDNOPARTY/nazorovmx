@@ -19,11 +19,12 @@ var common = {
 
 		var bLazy = new Blazy({});
 
-		$('.tabs-section a').click(function(e){
+		$('.tabs-section-item').click(function(e){
 			e.preventDefault();
 			if($(this).hasClass('.active') == false) {
 				var tabCnt = '.' + $(this).attr('data-cnt');
-				$('.tabs-section a.active, .tab-cnt').removeClass('active')
+				$(this).closest('.tabs-section-wrap').find('.tabs-section .active').removeClass('active')
+				$(this).closest('.tabs-section-wrap').find('.tab-cnt').removeClass('active')
 				$(tabCnt).addClass('active')
 				$(this).addClass('active');
 				var bLazy = new Blazy({});
@@ -57,28 +58,9 @@ var common = {
 		$('.call-popup').click(function(event){
 			event.preventDefault();
 			var popup  = '#' + $(this).attr('data-popup');
-			if($(this).attr('data-popup') != 'polyticsPopup'){
-				$('.popup-wrapper').removeClass('active');
-				$('header').removeClass('open');
-				$('body').addClass('hidden');
-				$(popup).fadeIn('fast')
-				$(popup).find('.work-popup-slider').owlCarousel('destroy');
-				setTimeout(function(){
-					$(popup).find('.work-popup-slider').owlCarousel({
-						items:1,
-						margin: 0,
-						autoHeight:true,
-						lazyLoad: true,
-						nav: false,
-						dots: true
-					});
-				}, 200)
-
-			}else {
-				$(popup).fadeIn('fast')
-				$('header').removeClass('open');
-			}
-
+			$('header').removeClass('open');
+			$(popup).fadeIn('fast');
+			$('body').addClass('hidden');
 		});
 
 		
@@ -135,6 +117,14 @@ var common = {
 					items:3
 				},
 			}
+		})
+		$('.gallery').owlCarousel({
+			loop:true,
+			items: 1,
+			margin:0,
+			nav: false,
+			dots: true,
+			autoHeight: true,
 		})
 	},
 };
