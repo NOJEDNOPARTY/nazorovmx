@@ -4,6 +4,7 @@ var common = {
 		common.owl();
 	},
 	main: function(){
+		
 
 		$('.menu-trigger').click(function(event){
 			event.preventDefault();
@@ -30,8 +31,6 @@ var common = {
 				var bLazy = new Blazy({});
 			}
 		});
-
-		$(".phone-trigger").mask("+81(999) 999-99-99");
 
 		jQuery(function($){
 			$(document).mouseup(function (e){ 
@@ -98,15 +97,15 @@ var common = {
 			$('header').removeClass('open');
 		});
 
+
 	},
 	owl: function(){
 		$('.reviews-slider').owlCarousel({
 			loop:true,
 			items: 3,
-			margin:0,
+			margin:52,
 			nav: true,
 			dots: false,
-			center: true,
 			autoHeight: true,
 			responsive:{
 				0:{
@@ -125,7 +124,60 @@ var common = {
 			nav: false,
 			dots: true,
 			autoHeight: true,
-		})
+		});
+
+		$('.price-slider').owlCarousel({
+			loop:true,
+			items: 1,
+			margin:0,
+			nav: true,
+			dots: false,
+			autoHeight: true,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+		});
+
+		$('.coaches-slider').owlCarousel({
+			loop:true,
+			items: 1,
+			margin:0,
+			nav: true,
+			dots: false,
+			autoHeight: true,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+		});
+
+		var startSLider = $('.start-slider');
+
+		startSLider.owlCarousel({
+			loop:true,
+			items: 1,
+			margin:0,
+			nav: true,
+			dots: false,
+			autoHeight: true,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+			smartSpeed: 100
+		});
+
+		startSLider.on('translate.owl.carousel', function(event) {
+			var nextImg = $(this).find('.owl-item.active').next().next().find('.start-slider-img img').attr('src');
+			var prevImg = $(this).find('.owl-item.active').find('.start-slider-img img').attr('src');
+			var startNext = $('.start-slider-next img');
+			var startPrev = $('.start-slider-prev img');
+
+			startNext.fadeOut('slow', function () {
+				startNext.attr('src', nextImg);
+				startNext.fadeIn('fast');
+			});
+
+			startPrev.fadeOut('slow', function () {
+				startPrev.attr('src', prevImg);
+				startPrev.fadeIn('fast');
+			});
+		});
 	},
 };
 

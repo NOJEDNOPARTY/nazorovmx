@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,8 +41,8 @@
                 <a href="#top" class="anchor">ГЛАВНАЯ</a>
                 <a href="#start" class="anchor">КАК НАЧАТЬ?</a>
                 <a href="#about" class="anchor">О ШКОЛЕ</a>
-                <a href="#" class="anchor">ОТЗЫВЫ</a>
-                <a href="#" class="anchor">ЦЕНЫ</a>
+                <a href="#reviews" class="anchor">ОТЗЫВЫ</a>
+                <a href="#prices" class="anchor">ЦЕНЫ</a>
                 <a href="#questions" class="anchor">FAQ</a>
                 <a href="#contact" class="anchor">КОНТАКТЫ</a>
                 <a href="tel:+XXXXXXXXXXX" class="callback-link"><img src="./images/tel-icon.svg" alt="tel"><span>+X (XXX) XXX XX XX</span></a>
@@ -56,7 +56,7 @@
                 <p>Обучение мотокроссу, <br> прокат мотоциклов и экипировки <br> от чемпионов России по мотокроссу! <br> Тренировки всех уровней сложности для учеников разных возрастов. </p>
                 <form action="#">
                     <input type="text" class="field" placeholder="Имя">
-                    <input type="text" class="field phone-trigger" placeholder="Телефон">
+                    <input type="text" class="field tel-trigger" placeholder="Телефон">
                     <textarea class="field" placeholder="Комментарий"></textarea>
                     <input class="btn btn-big" type="submit" value="Хочу катать!">
                 </form>
@@ -69,7 +69,30 @@
     </div>
     <div id="start" class="start">
         <div class="wrapper">
-
+            <div class="start-cnt">
+                <div class="title">
+                    <span class="title-text">Как начать заниматься <span>мотокроссом?</span></span>
+                    <span class="title-bg">Как начать заниматься мотокроссом?</span>
+                </div>
+                <p>Мотокросс - езда на внедорожном мотоцикле по специально подготовленным трассам. Мотоцикл и экипировку можно арендовать у нас, а можно прийти со своими - есть помещение для хранения. Права не нужны. </p>
+                <p>Тренировки проводятся в любое время года - это безопасно и увлекательно. В нашем распоряжении - целый спортивный комплекс в Крылатском (все внутри МКАД, ул. Крылатская, 8).</p>
+                <p>Девушек учим с особой осторожностью <img src="./images/smile.png" alt="smile"></p>
+                <p class="bold-text">Просто приезжайте и попробуйте мотокросс прямо сейчас!</p>
+                <a href="#" class="btn call-popup" data-popup="consultingPopup">Записаться</a>
+            </div>
+            <div class="start-slider-wrap">
+                <div class="start-slider-prev">
+                    <img src="./images/start-img-3.jpg" alt="start">
+                </div>
+                <div class="start-slider slider slider-column owl-carousel">
+                    <div class="start-slider-img"><img src="./images/start-img-1.jpg" alt="start"></div>
+                    <div class="start-slider-img"><img src="./images/start-img-2.jpg" alt="start"></div>
+                    <div class="start-slider-img"><img src="./images/start-img-3.jpg" alt="start"></div>
+                </div>
+                <div class="start-slider-next">
+                    <img src="./images/start-img-2.jpg" alt="start">
+                </div>
+            </div>
         </div>
     </div>
     <div id="about" class="about b-lazy" data-src="./images/about-bg.jpg">
@@ -89,8 +112,8 @@
                     <p>Если ты опытный парень - добро пожаловать в группу быстрых любителей мотоспорта, давай вместе готовиться к соревнованиям любого уровня. Наша работа - научить тебя всему тому, что умеем сами: старты, прямые, повороты, трамплины, волны, езда по “бетону”, льду, песку и рыхлому грунту.</p>
                     <p>Каждую тренировку ты будешь открывать для себя элементы, раньше казавшиеся невозможными.</p>
                     <div class="social">
-                        <a href="#"><img src="./images/vk.png" alt="vk"></a>
-                        <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="./images/vk.svg" alt="vk"></a>
+                        <a href="#"><img src="./images/instagram.svg" alt="instagram"></a>
                     </div>
                 </div>
             </div>
@@ -115,7 +138,7 @@
         <div class="title">
             <div class="wrapper">
                 <span class="title-text">ДОМАШНИЙ <span>ТРЕК</span></span>
-                <p class="subtitle">Домашний трек - трасса в Крылатском, на стадионе технических видов спорта. <br> Это один из двух треков, расположенных внутри МКАД. Трек состоит из трех частей<div class="br"></div> Трек грунтовый, за ним очень хорошо ухаживают и поддерживают в отличном состоянии в любое время года. </p>
+                <p class="subtitle">Домашний трек - трасса в Крылатском, на стадионе технических видов спорта. <br> Это один из двух треков, расположенных внутри МКАД. Трек состоит из трех частей <br> Трек грунтовый, за ним очень хорошо ухаживают и поддерживают в отличном состоянии в любое время года. </p>
             </div>
             <span class="title-bg">ДОМАШНИЙ ТРЕК</span>
         </div>
@@ -146,6 +169,123 @@
             </div>
         </div>
     </div>
+    <div class="about coaches b-lazy" data-src="./images/about-bg.jpg">
+        <img class="mud-small mud-small-top" src="./images/mud-top-2.png" alt="mud">
+        <img class="coaches-haad" src="./images/head.png" alt="cup">
+        <div class="wrapper">
+            <div class="title title-white">
+                <span class="title-text">наши  <span>тренеры</span></span>
+            </div>
+            <div class="coaches-slider slider slider-row owl-carousel">
+                <div class="about-list">
+                    <div class="about-img"><img src="./images/coach-1.png" alt="coach"></div>
+                    <div class="about-cnt">
+                        <p class="coach-name">Имя Фамилия</p>
+                        <p class="coach-work">Стаж: Х лет</p>
+                        <p>Если ты опытный парень - добро пожаловать в группу быстрых любителей мотоспорта, давай вместе готовиться к соревнованиям любого уровня. Наша работа - научить тебя всему тому, что умеем сами: старты, прямые, повороты, трамплины, волны, езда по “бетону”, льду, песку и рыхлому грунту.</p>
+                        <p>Наша работа - научить тебя всему тому, что умеем сами: старты, прямые, повороты, трамплины, волны, езда по “бетону”, льду, песку и рыхлому грунту.</p>
+                        <div class="social">
+                            <a href="#"><img src="./images/vk.svg" alt="vk"></a>
+                            <a href="#"><img src="./images/instagram.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-list">
+                    <div class="about-img"><img src="./images/coach-2.jpg" alt="coach"></div>
+                    <div class="about-cnt">
+                        <p class="coach-name">Имя Фамилия</p>
+                        <p class="coach-work">Стаж: Х лет</p>
+                        <p>Если ты опытный парень - добро пожаловать в группу быстрых любителей мотоспорта, давай вместе готовиться к соревнованиям любого уровня. Наша работа - научить тебя всему тому, что умеем сами: старты, прямые, повороты, трамплины, волны, езда по “бетону”, льду, песку и рыхлому грунту.</p>
+                        <p>Наша работа - научить тебя всему тому, что умеем сами: старты, прямые, повороты, трамплины, волны, езда по “бетону”, льду, песку и рыхлому грунту.</p>
+                        <div class="social">
+                            <a href="#"><img src="./images/vk.svg" alt="vk"></a>
+                            <a href="#"><img src="./images/instagram.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="mud-small mud-small-bottom" src="./images/mud-bottom-3.png" alt="mud">
+    </div>
+    <div id="reviews" class="reviews">
+        <div class="title">
+            <div class="wrapper">
+                <span class="title-text"><span>ОТЗЫВЫ</span></span>
+                <p class="subtitle">Посмотрите отзывы. Поговорите с людьми, которые их оставили, в социальных сетях. </p>
+            </div>
+            <span class="title-bg">ОТЗЫВЫ</span>
+        </div>
+        <div class="wrapper">
+            <div class="reviews-slider slider slider-row owl-carousel">
+                <div class="rev">
+                    <div class="rev-quote"><img src="./images/quote.svg" alt="quote"></div>
+                    <div class="rev-head">
+                        <div class="rev-img"><img src="./images/rev-img-1.jpg" alt="rev"></div>
+                        <div class="rev-head-info">
+                            <p>10.01.2020</p>
+                            <a href="#">Иван Иванов <img src="./images/vk.svg" alt="vk"></a>
+                        </div>
+                    </div>
+                    <p class="rev-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                </div>
+                <div class="rev">
+                    <div class="rev-quote"><img src="./images/quote.svg" alt="quote"></div>
+                    <div class="rev-head">
+                        <div class="rev-img"><img src="./images/rev-img-2.jpg" alt="rev"></div>
+                        <div class="rev-head-info">
+                            <p>10.01.2020</p>
+                            <a href="#">Анна Мишина<img src="./images/instagram.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                    <p class="rev-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                </div>
+                <div class="rev">
+                    <div class="rev-quote"><img src="./images/quote.svg" alt="quote"></div>
+                    <div class="rev-head">
+                        <div class="rev-img"><img src="./images/rev-img-3.jpg" alt="rev"></div>
+                        <div class="rev-head-info">
+                            <p>10.01.2020</p>
+                            <a href="#">Андрей Алешин <img src="./images/vk.svg" alt="vk"></a>
+                        </div>
+                    </div>
+                    <p class="rev-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                </div>
+                <div class="rev">
+                    <div class="rev-quote"><img src="./images/quote.svg" alt="quote"></div>
+                    <div class="rev-head">
+                        <div class="rev-img"><img src="./images/rev-img-1.jpg" alt="rev"></div>
+                        <div class="rev-head-info">
+                            <p>10.01.2020</p>
+                            <a href="#">Иван Иванов <img src="./images/vk.svg" alt="vk"></a>
+                        </div>
+                    </div>
+                    <p class="rev-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                </div>
+                <div class="rev">
+                    <div class="rev-quote"><img src="./images/quote.svg" alt="quote"></div>
+                    <div class="rev-head">
+                        <div class="rev-img"><img src="./images/rev-img-2.jpg" alt="rev"></div>
+                        <div class="rev-head-info">
+                            <p>10.01.2020</p>
+                            <a href="#">Анна Мишина<img src="./images/instagram.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+                    <p class="rev-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                </div>
+                <div class="rev">
+                    <div class="rev-quote"><img src="./images/quote.svg" alt="quote"></div>
+                    <div class="rev-head">
+                        <div class="rev-img"><img src="./images/rev-img-3.jpg" alt="rev"></div>
+                        <div class="rev-head-info">
+                            <p>10.01.2020</p>
+                            <a href="#">Андрей Алешин <img src="./images/vk.svg" alt="vk"></a>
+                        </div>
+                    </div>
+                    <p class="rev-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="appointment b-lazy" data-src="./images/appointment-bg.jpg">
         <img class="mud-small mud-small-top" src="./images/mud-top-1.png" alt="mud">
         <div class="wrapper">
@@ -154,6 +294,122 @@
             <a href="#" class="btn call-popup" data-popup="consultingPopup">Записаться</a>
         </div>
         <img class="mud-small mud-small-bottom" src="./images/mud-bottom-1.png" alt="mud">
+    </div>
+    <div id="prices" class="prices b-lazy" data-src="./images/prices-bg.png">
+        <div class="title">
+            <div class="wrapper">
+                <span class="title-text"><span>ЦЕНЫ</span></span>
+            </div>
+            <span class="title-bg">ЦЕНЫ</span>
+        </div>
+        <div class="wrapper">
+            <div class="price-item b-lazy" data-src="./images/price-bg-1.jpg">
+                <div class="price-item-cnt">
+                    <div class="price-item-info b-lazy" data-src="./images/price-item-cnt-bg.png">
+                        <h5>ДЛЯ НОВИЧКОВ</h5>
+                        <p>
+                            <span>4 800</span>
+                            рублей
+                            <span class="slash">/</span>
+                            <span>2</span>
+                            часа
+                        </p>
+                    </div>
+                    <div class="price-slider slider slider-column owl-carousel">
+                        <div class="price-slider-item">
+                            <div class="price-slider-item-img"><img src="./images/bike-1.png" alt="bike"></div>
+                            <div class="price-slider-text">
+                                <p>Аренда</p>
+                                <span>GR7 250</span>
+                            </div>
+                        </div>
+                        <div class="price-slider-item">
+                            <div class="price-slider-item-img"><img src="./images/bike-2.png" alt="bike"></div>
+                            <div class="price-slider-text">
+                                <p>Аренда</p>
+                                <span>GR7 25110</span>
+                            </div>
+                        </div>
+                        <div class="price-slider-item">
+                            <div class="price-slider-item-img"><img src="./images/bike-3.png" alt="bike"></div>
+                            <div class="price-slider-text">
+                                <p>Аренда</p>
+                                <span>Avantis 250</span>
+                            </div>
+                        </div>
+                        <div class="price-slider-item">
+                            <div class="price-slider-item-img"><img src="./images/bike-4.png" alt="bike"></div>
+                            <div class="price-slider-text">
+                                <p>Аренда</p>
+                                <span>Pitbike YCF 150</span>
+                            </div>
+                        </div>
+                        <div class="price-slider-item">
+                            <div class="price-slider-item-img"><img src="./images/bike-5.png" alt="bike"></div>
+                            <div class="price-slider-text">
+                                <p>Аренда</p>
+                                <span>Kayo (Детский)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item-benefits">
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-1.svg" alt="bnf"></div>
+                        <p>аренда мотоцикла</p>
+                    </div>
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-2.svg" alt="bnf"></div>
+                        <p>Полный комплект экипировки</p>
+                    </div>
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-3.svg" alt="bnf"></div>
+                        <p>Тренер</p>
+                    </div>
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-4.svg" alt="bnf"></div>
+                        <p>бензин</p>
+                    </div>
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-5.svg" alt="bnf"></div>
+                        <p>мойка</p>
+                    </div>
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-6.svg" alt="bnf"></div>
+                        <p>вход на трек</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price-item b-lazy" data-src="./images/price-bg-2.jpg">
+                <div class="price-item-cnt">
+                    <div class="price-item-info b-lazy" data-src="./images/price-item-cnt-bg.png">
+                        <h5>ДЛЯ ПРОДВИНУТЫХ</h5>
+                        <p>
+                            <span>3 000</span>
+                            рублей
+                            <span class="slash">/</span>
+                            <span>2</span>
+                            часа
+                        </p>
+                    </div>
+                    <div class="price-slider-item-wrap">
+                        <div class="price-slider-item price-slider-item-2">
+                            <div class="price-slider-item-img"><img src="./images/bike-bg.png" alt="bike"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item-benefits">
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-3.svg" alt="bnf"></div>
+                        <p>Тренер</p>
+                    </div>
+                    <div class="price-item-bnf">
+                        <div class="price-item-bnf-img"><img src="./images/bnf-6.svg" alt="bnf"></div>
+                        <p>вход на трек</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="questions" class="questions">
         <div class="title">
@@ -256,8 +512,8 @@
                 <p>ул.Xxxxxxxx, x, стадион технических видов спорта </p>
                 <a href="tel:+XXXXXXXXXXX">+X (XXX) XXX XX XX</a>
                 <div class="social">
-                    <a href="#"><img src="./images/vk.png" alt="vk"></a>
-                    <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="./images/vk.svg" alt="vk"></a>
+                    <a href="#"><img src="./images/instagram.svg" alt="instagram"></a>
                 </div>
             </div>
         </div>
@@ -300,7 +556,6 @@
     <script src="./js/libs/jquery-3.3.1.min.js"></script>
     <script src="./js/libs/jquery.maskedinput.min.js"></script>
     <script src="./js/libs/owlcarousel/owl.carousel.min.js"></script>
-    <script src="./js/libs/fancyBox/jquery.fancybox.min.js"></script>
     <script src="./js/libs/blazy.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
