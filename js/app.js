@@ -10,6 +10,7 @@ var common = {
 			event.preventDefault();
 			$('body').toggleClass('hidden');
 			$(this).closest('header').toggleClass('open');
+			$(this).closest('header').find('.header-wrap').slideToggle('fast');
 		});
 
 		$('.question-trigger').click(function(event){
@@ -93,8 +94,9 @@ var common = {
 			var id  = $(this).attr('href'),
 			top = $(id).offset().top;
 			$('body,html').animate({scrollTop: top - 100}, 3000);
-			$('.menu-trigger').removeClass('open');
-			$('header').removeClass('open');
+			$('body').removeClass('hidden');
+			$(this).closest('header').removeClass('open');
+			$(this).closest('header').find('.header-wrap').slideUp('fast');
 		});
 
 
@@ -110,9 +112,12 @@ var common = {
 			responsive:{
 				0:{
 					items:1,
-					center: false
+					margin: 0
 				},
-				551:{
+				501:{
+					items:2
+				},
+				768:{
 					items:3
 				},
 			}

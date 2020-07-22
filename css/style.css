@@ -8,6 +8,11 @@ body {
 	overflow-x: hidden;
 }
 
+body > div,
+footer {overflow: hidden;}
+
+body.hidden {overflow: hidden;}
+
 .wrapper {
 	width: 100%;
 	max-width: 1140px;
@@ -83,7 +88,7 @@ header .logo img {width: 100%;}
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: cover;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 
@@ -342,7 +347,10 @@ textarea.field {
 	top: 281px;
 }
 
-.map {width: 100%;}
+.map {
+	width: 100%;
+	margin-bottom: -6px;
+}
 
 .questions {padding: 0 0 45px;}
 
@@ -451,9 +459,9 @@ textarea.field {
 	width: 100%;
 }
 
-.mud-small-top {top: 0;}
+.mud-small-top {top: 0px;}
 
-.mud-small-bottom {bottom: 0;}
+.mud-small-bottom {bottom: 0px;}
 
 .mud-small > * {
 	position: relative;
@@ -560,7 +568,7 @@ textarea.field {
 .gallery .owl-dots .owl-dot:not(:last-child) {margin-right: 89px;}
 
 
-.tracks {padding: 46px 0 30px;}
+.tracks {padding: 46px 0 0;}
 
 .tracks .title span.title-bg {
 	top: 66px;
@@ -1346,7 +1354,6 @@ p.coach-name {
 	display: none;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 20px;
 }
 
 .menu-trigger {
@@ -1363,7 +1370,7 @@ p.coach-name {
 	display: block;
 	width: 100%;
 	height: 3px;
-	background: linear-gradient(342.26deg, #EC7A8F 20.16%, #FCAF8C 94.53%);
+	background: #FFA800;
 	transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -1387,3 +1394,292 @@ header.open .menu-trigger span:nth-child(2) {display: none;}
 
 header.open .menu-trigger span:nth-child(3) {transform: rotate(40deg);}
 
+
+@media(max-width: 1400px) {
+	.about-cup,
+	.coaches-haad {display: none;}
+	.field {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+
+@media(max-width: 1120px) {
+	.about-img {
+		max-width: 370px;
+		margin-left: 0;
+	}
+	.about-list {align-items: flex-end;}
+	.coaches .about-list {align-items: flex-start;}
+	.about-cnt .social {padding-bottom: 80px;}
+	.about {padding: 135px 0 50px;}
+	.coaches {
+		padding: 90px 0 190px;
+	}
+	.rev {padding: 62px 20px 23px 20px;}
+	.appointment {padding: 150px 0;}
+	.price-item-cnt {
+		align-items: center;
+		flex-direction: column;
+	}
+	.price-item-info {
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+	.price-slider {
+		margin-right: 15px;
+		margin: 0;
+		margin-right: 15px;
+		width: calc(100% - 15px);
+	}
+	.price-item-benefits {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.price-item-bnf {
+		max-width: 33%;
+		margin: 0 0 15px !important;
+	}
+	.price-slider-item-2 {    margin-top: -40px;}
+}
+
+@media(max-width: 992px) {
+	/* .slider .owl-nav button{background: #C4C4C4 !important;}
+	.slider .owl-nav button::before {background-image: url('../images/arrow-slider-white.svg');}
+	.slider.slider-row .owl-nav button::before {background-image: url('../images/arrow-white-right.svg');}
+	.slider .owl-nav button.owl-next::before {transform: rotate(0);}
+	.slider .owl-nav button.owl-prev::before {transform: rotate(180deg);} */
+
+	.coaches .about-img::before {display: none;}
+	.coaches .about-img {padding: 0;}
+	.header-mob {display: flex;}
+	header nav {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	header nav a {margin: 0 0 15px !important;}
+
+	.header-wrap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 100vh;
+		background-color: #222222;
+		padding: 100px 20px 90px;
+		overflow: scroll;
+	}
+	header  .logo {max-width: 50px;}
+	header nav .logo {display: none;}
+
+	.title-bg,
+	.mud-small {display: none !important;}
+	.banner-cnt {max-width: 100%;}
+	.banner-img {opacity: 0.4;}
+	.banner {padding: 100px 0;}
+	h1 {
+		font-size: 26px;
+		line-height: 32px;
+		text-align: center;
+	}
+	.banner-cnt p {
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+	.banner-cnt p br,
+	.start-slider-prev,
+	.start-slider-next {display: none;}
+	.banner-cnt form {
+		margin: 0 auto;
+	}
+	.btn-big,
+	.btn {
+		padding: 0 30px;
+		height: 45px;
+		line-height: 45px;
+		font-size: 16px;
+		margin: 0 auto;
+	}
+	.field {
+		height: 45px;
+		font-size: 16px;
+		line-height: 45px;
+	}
+	.banner-cnt form input.field {
+		max-width: 100%;
+	}
+	.start .wrapper {
+		flex-direction: column;
+	}
+	.start-cnt {
+		max-width: 100%;
+		padding: 0px 0 20px;
+	}
+	.title .title-text {
+		font-size: 24px !important;
+		line-height: 36px !important;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
+
+
+
+	.start-cnt p,
+	.subtitle,
+	.appointment p,
+	.about-cnt p {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	.subtitle {
+		text-align: center;
+		padding-bottom: 15px;
+	}
+
+	.subtitle span {font-size: 14px;}
+
+	.start-cnt p {
+		margin-bottom: 17px;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.start-cnt .btn {
+		display: flex;
+		max-width: 154px;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.about {
+		padding: 50px 0 0;
+	}
+	.about-list {
+		flex-direction: column;
+    	align-items: center;
+	}
+	.about-img {order: 2;}
+	.about-cnt {
+		order: 1;
+		max-width: 100%;
+		text-align: center;
+		padding-top: 0;
+	}
+	.about-cnt .social {
+		padding: 0;
+		justify-content: center;
+	}
+	.gallery .owl-dots .owl-dot {
+		max-width: 15px;
+		height: 15px;
+		border-radius: 50%;
+	}
+	.gallery .owl-dots .owl-dot:not(:last-child) {
+		margin-right: 15px;
+	}
+	.gallery .owl-dots {bottom: 15px;}
+	.title {padding: 0;}
+	.tabs-section {
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+	.tabs-section-ite-title {
+		font-size: 18px;
+		line-height: 18px;
+		padding-bottom: 5px;
+	}
+	.tabs-section-item {margin: 0 10px 20px;}
+	.coaches .about-list {align-items: center;}
+	.coaches .about-cnt {
+		max-width: 100%;
+		padding: 0;
+		order: 2;
+	}
+	.coaches .about-img {
+		order: 1;
+		margin-bottom: 30px;
+	}
+	.coaches {
+		padding: 50px 0;
+	}
+	.coaches-slider .owl-nav {
+		position: static;
+		justify-content: center;
+		margin-top: 30px;
+	}
+	.reviews .title .title-text {
+		padding-bottom: 20px;
+	}
+	.appointment,
+	.prices,
+	.reviews {
+		padding: 40px 0;
+	}
+	.appointment h4 {
+		font-size: 28px;
+		line-height: 38px;
+	}
+	.question {padding: 15px 0;}
+	.footer .toTop {display: none;}
+	.reviews-slider .owl-nav {justify-content: center;}
+}
+@media(max-width: 767px) {
+	.footer h5 {
+		font-size: 16px;
+		line-height: 19px;
+	}
+	.footer p {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.footer a,
+	.question-title {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	.tabs-section-item p {opacity: 1;}
+	.question {
+		padding: 10px 0;
+		border-bottom: 1px solid #222222;
+	}
+	.question:first-child {
+		border-top: 1px solid #222222;
+	}
+	.question-plus {
+		font-size: 30px;
+		line-height: 10px;
+	}
+	.question-cnt p {
+		padding-right: 10px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+@media(max-width: 500px) {
+	.reviews-slider .owl-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.rev-text {
+		height: auto;
+		-webkit-line-clamp: 100;
+	}
+	.price-item-bnf {max-width: 50%;}
+	.price-slider-text {
+		position: static;
+		margin-right: -45px;
+	}
+	.price-item-info {
+		padding: 20px;
+		background-size: 100% 100%;
+		min-height: 190px;
+	}
+}
